@@ -1,24 +1,17 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
-import HomePortfolio from "./pages/HomePortfolio";
+// views
+import { About, Contact, Hero, Projects } from "./views";
 
-import { Routes, Route, useLocation } from "react-router-dom";
+// components
+import { Menu } from "./components";
 
 function App() {
-  // const HomeCheck = () => {
-  //   const location = useLocation();
-  //   const currentPath = location.pathname;
-  //   const pathRoot = currentPath.split("/")?.[1];
-  //   return pathRoot;
-  // };
-
   return (
     <>
-      <div>
-        <Routes>
-          <Route path="/" element={<HomePortfolio />} />
-        </Routes>
-      </div>
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
+      <Menu />
     </>
   );
 }
